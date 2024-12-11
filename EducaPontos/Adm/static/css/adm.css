@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    gap: 20vh;
+    padding: 15px 30px;
+}
+
+.nav-bar img{
+    width: 30vh;
+}
+
+.nav-bar .list-nav{
+    display: flex;
+    gap: 10vh;
+}
+
+.nav-bar .list-nav a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: rgb(4, 4, 171);
+    text-decoration: none;
+}
+
+.footer-nav{
+    display: flex;
+    padding: 25px 50px;
+
+    background-color: rgb(4, 4, 171);
+    border-radius: 20px;
+}
+
+.footer-nav h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    gap: 10vh;
+    padding: 20px 30px;
+    width: 90%;
+
+    background-color: rgb(172, 233, 245);
+    border-radius: 20px;
+}
+
+.header h1{
+    font-size: 3vh;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header strong{
+    padding: 4px 10px;
+    color: black;
+    background-color: gray;
+    border-radius: 100%;
+}
+
+.info{
+    display: flex;
+    place-self: center;
+    padding: 30px 0px;
+}
+
+.info img{
+    height: 30vh;
+    padding: 2vh;
+
+    box-shadow: 0px 1px black;
+}
+
+.info .formulario-info form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 20px;
+    width: 1100px;
+
+    box-shadow: -1px 0px  black;
+}
+
+.formulario-info .form-row2{
+    display: flex;
+    gap: 5vh;
+}
+
+.formulario-info .form-row2 div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50vh;
+}
+
+.formulario-info .form-row6{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2vh;
+}
+
+.formulario-info .form-row6 div{
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+
+    font-size: 2vh;
+}
+
+.formulario-info form label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5vh;
+}
+
+.info .formulario-info input{
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgb(172, 233, 245);
+    border: 0px;
+}
+
+.info .formulario-info select{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(172, 233, 245);
+    border: 0px;
+}
+
+.confirm button{
+    display: flex;
+    padding: 15px 40px;
+    background-color: blue;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+}
+
+.confirm button:hover{
+    display: flex;
+    padding: 15px 40px;
+    background-color: white;
+    border: 0px;
+    border-radius: 10px;
+    color: blue;
+}
