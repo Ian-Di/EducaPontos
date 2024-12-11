@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="aluno.css">
+    <link rel="stylesheet" href="{% static 'css/aluno.css' %}">
     <title>Aluno-EducaPontos</title>
 </head>
 <body>
     <div class="nav-bar">
-        <img src="./assts/logo-row.png" alt="">
+        <img src="{% static 'css/image/logo-row.png' %}" alt="">
         <div class="name-aluno">
             <h1>
                 Olá, Diego Ribeiro
@@ -17,7 +18,7 @@
                     1 Série Ens-Médio
                 </strong>
             </h1>
-            <img src="./assts/icons8-face-100.png" alt="">
+            <img src="{% static 'css/image/icons8-face-100.png' %}" alt="">
         </div>
     </div>
     <div class="footer-nav">
@@ -191,7 +192,7 @@
             </table>
         </div>
         <div class="graficos">
-            <img src="./assts/grafico.png.jpeg" alt="">
+            <img src="{% static 'css/image/grafico.png' %}" alt="">
         </div>
     </div>
 </body>

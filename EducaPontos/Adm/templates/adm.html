@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ADM.css">
+    <link rel="stylesheet" href="{% static 'css/adm.css' %}">
     <title>ADM-EducaPontos</title>
 </head>
 <body>
     <div class="nav-bar">
-        <img src="./assts/logo-row.png" alt="">
+        <img src="{% static 'css/image/logo-row.png' %}" alt="">
         <div class="list-nav">
             <a href="">Professores</a>
             <a href="">Aluno</a>
@@ -23,7 +24,7 @@
     </div>
     <div class="info">
         <div class="img-info">
-            <img src="./assts/image.png">
+            <img src="{% static 'css/image/image.png' %}">
         </div>
         <div class="formulario-info">
             <form action="">
