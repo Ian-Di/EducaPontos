@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
-from .views import home
+from .views import desempenho
 
 urlpatterns = [
-    path('', home, name='desempenho'),
+    path('', desempenho, name='desempenho'),
 ]

@@ -37,9 +37,59 @@
                 <div class="contact">
                     <a href="#">Dificuldades? Entre em contato</a>
                 </div>
+                {% csrf_token %}
             </form>
         </div>
     </div>
-    <script src="{% static 'js/cadastro.js' %}"></script>
+    <script>
+        // Usuários simulados para teste (em um cenário real, esses dados viriam de um banco de dados)
+        const users = {
+            'professor@gmail.com': {
+                password: '123',
+                role: 'professor'
+            },
+            'aluno@gmail.com': {
+                password: '567',
+                role: 'aluno'
+            }
+        };
+
+        // Função para verificar as credenciais do usuário
+        function authenticateUser(username, password) {
+            if (users[username] && users[username].password === password) {
+                return users[username].role; // Retorna o tipo de usuário ("professor" ou "aluno")
+            }
+            return null; // Retorna null se não encontrar o usuário ou a senha estiver incorreta
+        }
+
+        // Função de redirecionamento com base no tipo de usuário
+        function redirectToPage(userRole) {
+            if (userRole === 'professor') {
+                window.location.href = 'professor'; // Redireciona para a página do professor
+            } else if (userRole === 'aluno') {
+                window.location.href = 'aluno'; // Redireciona para a página do aluno
+            }
+        }
+
+        // Manipulador de evento de envio do formulário
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário tradicional
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Chama a função de autenticação
+            const userRole = authenticateUser(username, password);
+
+            if (userRole) {
+                // Se o usuário for autenticado, redireciona para a página correspondente
+                redirectToPage(userRole);
+            } else {
+                // Se a autenticação falhar, exibe uma mensagem de erro
+                errorMessage.textContent = 'Usuário ou senha inválidos.';
+            }
+        });
+    </script>
 </body>
 </html>
