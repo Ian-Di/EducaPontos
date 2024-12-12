@@ -13,11 +13,9 @@ loginForm.addEventListener('submit', (event) => {
 
     // Redirecionando para a página correspondente
     if (userType === 'professor') {
-        var professorHtmlUrl = "{% static 'Educa_pontos/Professor-EducaPontos/professor.html' %}";
-        window.location.href = professorHtmlUrl;
+        window.location.href = "{% url 'professor' %}";
     } else if (userType === 'aluno'){
-        var alunoHtmlUrl = "{% static 'Educa_pontos/Professor-EducaPontos/professor.html' %}";
-        window.location.href = alunoHtmlUrl;
+        window.location.href = "{% url 'cadastro' %}";
     } else {
         alert('Usuário ou senha inválidos.');
     }
