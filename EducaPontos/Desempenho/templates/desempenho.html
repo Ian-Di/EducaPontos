@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranqueamento - Educa Pontos</title>
+    <link rel="stylesheet" href="{% static 'css/desempenho.css' %}">
+</head>
+<body>
+    <div class="nav-bar">
+        <img src="{% static 'css/image/logo-row.png' %}" alt="">
+        <div class="name-aluno">
+            <h1>
+                Diego Ribeiro
+                <br>
+                <strong>
+                    1 Série Ens-Médio
+                </strong>
+            </h1>
+            <img src="{% static 'css/image/icons8-face-100.png' %}" alt="">
+        </div>
+    </div>
+    <div class="footer-nav">
+        <h3>Ranking</h3>
+    </div>
+    <div class="mid">
+        <main class="ranking-container">
+            <!-- Faixa Diamante -->
+            <section class="category diamond" onclick="toggleRanking(this)">
+                <h2>Faixa Diamante (81 - 100 pontos)</h2>
+                <div class="ranking-list hidden">
+                    <ol class="ranking">
+                        <li>Gabriel Pereira - 100 pontos</li>
+                        <li>Eduardo Ramos - 99 pontos</li>
+                        <li>Alice Fernandes - 98 pontos</li>
+                        <li>Carla Vieira - 97 pontos</li>
+                        <li>Daniel Moreira - 96 pontos</li>
+                        <li>Felipe Andrade - 95 pontos</li>
+                        <li>Larissa Gomes - 94 pontos</li>
+                        <li>Henrique Campos - 93 pontos</li>
+                        <li>Beatriz Farias - 92 pontos</li>
+                        <li>Bruna Cardoso - 91 pontos</li>
+                        <li>Paulo Henrique - 90 pontos</li>
+                        <li>Sandra Costa - 89 pontos</li>
+                        <li>André Monteiro - 88 pontos</li>
+                        <li>Elaine Barros - 87 pontos</li>
+                        <li>Vanessa Ribeiro - 86 pontos</li>
+                    </ol>
+                </div>
+            </section>
+    
+            <!-- Faixa Ouro -->
+            <section class="category gold" onclick="toggleRanking(this)">
+                <h2>Faixa Ouro (65 - 80 pontos)</h2>
+                <div class="ranking-list hidden">
+                    <ol class="ranking">
+                        <li>Mariana Castro - 80 pontos</li>
+                        <li>Lucas Mendes - 78 pontos</li>
+                        <li>Clara Souza - 76 pontos</li>
+                        <li>Fernando Lima - 75 pontos</li>
+                        <li>Renata Silva - 74 pontos</li>
+                        <li>Juliana Rocha - 73 pontos</li>
+                        <li>Tiago Alves - 72 pontos</li>
+                        <li>Sofia Nunes - 71 pontos</li>
+                        <li>Diego Costa - 70 pontos</li>
+                        <li>Isabela Martins - 68 pontos</li>
+                    </ol>
+                    <p class="outside-ranking highlight gold-highlight">17º - Jerian Graciel (Você) - 66 pontos</p>
+                </div>
+            </section>
+    
+            <!-- Faixa Prata -->
+            <section class="category silver" onclick="toggleRanking(this)">
+                <h2>Faixa Prata (26 - 64 pontos)</h2>
+                <div class="ranking-list hidden">
+                    <ol class="ranking">
+                        <li>Pedro Santos - 64 pontos</li>
+                        <li>Maria Oliveira - 58 pontos</li>
+                        <li>João Silva - 55 pontos</li>
+                        <li>Ana Costa - 50 pontos</li>
+                        <li>Luiz Almeida - 48 pontos</li>
+                    </ol>
+                </div>
+            </section>
+    
+            <!-- Faixa Bronze -->
+            <section class="category bronze" onclick="toggleRanking(this)">
+                <h2>Faixa Bronze (0 - 25 pontos)</h2>
+                <div class="ranking-list hidden">
+                    <p class="no-ranking">Nenhum aluno nesta faixa.</p>
+                </div>
+            </section>
+        </main>
+        <div class="img-grafico">
+            <img src="{% static 'css/image/Captura de tela 2024-12-11 183112.png' %}" alt="">
+        </div>
+    </div>
+    <footer>
+        <script>
+        function toggleRanking(section) {
+        const rankingList = section.querySelector('.ranking-list');
+    
+        if (rankingList.classList.contains('hidden')) {
+            rankingList.classList.remove('hidden');
+        } else {
+            rankingList.classList.add('hidden');
+        }
+    }
+        </script>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Reset e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20vh;
+    padding: 15px 30px;
+}
+
+.nav-bar img{
+    width: 30vh;
+}
+
+.nav-bar .name-aluno{
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+    gap: 2vh;
+}
+
+.nav-bar .name-aluno h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5vh;
+    text-align: right;
+    color: rgb(4, 4, 171);
+    text-decoration: none;
+}
+
+.nav-bar .name-aluno strong{
+    font-size: 2vh;
+}
+
+.nav-bar .name-aluno img{
+    width: 7vh;
+    border: 3px solid rgb(4, 4, 171);
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.footer-nav{
+    display: flex;
+    padding: 25px 50px;
+
+    background-color: rgb(4, 4, 171);
+    border-radius: 20px;
+}
+
+.footer-nav h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #07449a, #07449a);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.ranking-container {
+    max-width: 85%;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Estilização das faixas */
+.category {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover */
+.category:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(255, 255, 255, 0.4); /* Brilho sutil */
+}
+
+.category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Cores por categoria */
+.bronze {
+    background: #b8860b;
+}
+
+.silver {
+    background: #c0c0c0;
+}
+
+.gold {
+    background: #ffd700;
+}
+
+.diamond {
+    background: #5ce1e6;
+}
+
+.no-ranking {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.ranking {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+    list-style: decimal inside;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ranking li {
+    margin: 8px 0;
+}
+
+/* Destacar o aluno atual */
+.highlight {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    background-color: #daa520; /* Tom mais escuro do ouro */
+    color: white;
+}
+/* Ocultar o ranking */
+.hidden {
+    display: none;
+}
+
+/* Transição suave */
+.ranking-list {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mid{
+    display: flex;
+    align-items: center;
+    place-self: center;
+    gap: 20vh;
+    padding: 40px 60px;
+}
