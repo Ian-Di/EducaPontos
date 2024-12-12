@@ -7,8 +7,8 @@ loginForm.addEventListener('submit', (event) => {
     // Obtendo os valores dos campos de entrada
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const professorHtmlUrl = "{% url 'professor' %}";
-    const alunoHtmlUrl = "{% url 'aluno' %}";
+    const professorHtmlUrl = "{% static 'tamplates/professor.html' %}";
+    const alunoHtmlUrl = "{% static 'tamplates/aluno.html' %}";
     // Função para verificar se o usuário é professor ou aluno (a ser implementada)
     const userType = checkUserType(username, password);
 
