@@ -7,16 +7,15 @@ loginForm.addEventListener('submit', (event) => {
     // Obtendo os valores dos campos de entrada
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-
+    const professorHtmlUrl = "{% url 'professor' %}";
+    const alunoHtmlUrl = "{% url 'aluno' %}";
     // Função para verificar se o usuário é professor ou aluno (a ser implementada)
     const userType = checkUserType(username, password);
 
     // Redirecionando para a página correspondente
     if (userType === 'professor') {
-        const professorHtmlUrl = "{% url 'professor' %}";
         window.location.href = professorHtmlUrl;
     } else if (userType === 'aluno'){
-        const alunoHtmlUrl = "{% url 'aluno' %}";
         window.location.href = alunoHtmlUrl;
     } else {
         alert('Usuário ou senha inválidos.');
