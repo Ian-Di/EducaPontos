@@ -51,6 +51,10 @@
             'aluno@gmail.com': {
                 password: '456',
                 role: 'aluno'
+            },
+            'adm': {
+                password: '1010',
+                role: 'adm'
             }
         };
 
@@ -68,7 +72,9 @@
                 window.location.href = 'professor'; // Redireciona para a página do professor
             } else if (userRole === 'aluno') {
                 window.location.href = 'aluno'; // Redireciona para a página do aluno
-            }
+            } else if (userRole === 'adm') {
+                window.location.href = 'adm'; // Redireciona para a página do administrador
+            } 
         }
 
         // Manipulador de evento de envio do formulário
