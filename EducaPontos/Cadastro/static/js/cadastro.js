@@ -13,9 +13,11 @@ loginForm.addEventListener('submit', (event) => {
 
     // Redirecionando para a página correspondente
     if (userType === 'professor') {
-        window.location.href = "{% url 'professor' %}";
+        var professorHtmlUrl = "{% url 'professor' %}";
+        window.location.href = professorHtmlUrl;
     } else if (userType === 'aluno'){
-        window.location.href = "{% url 'cadastro' %}";
+        var alunoHtmlUrl = "{% static 'aluno' %}";
+        window.location.href = alunoHtmlUrl;
     } else {
         alert('Usuário ou senha inválidos.');
     }
