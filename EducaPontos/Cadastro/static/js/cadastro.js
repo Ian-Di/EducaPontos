@@ -13,10 +13,10 @@ loginForm.addEventListener('submit', (event) => {
 
     // Redirecionando para a página correspondente
     if (userType === 'professor') {
-        var professorHtmlUrl = "{% static './EducaPontos/EducaPontos/Professor/templates/professor.hmtl' %}";
+        const professorHtmlUrl = "{% url 'professor' %}";
         window.location.href = professorHtmlUrl;
     } else if (userType === 'aluno'){
-        var alunoHtmlUrl = "{% static './EducaPontos/EducaPontos/Aluno/templates/aluno.hmtl' %}";
+        const alunoHtmlUrl = "{% url 'aluno' %}";
         window.location.href = alunoHtmlUrl;
     } else {
         alert('Usuário ou senha inválidos.');
